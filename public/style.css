@@ -61,12 +61,25 @@ body {
     display: none;
   }
   .pgp-block {
-  background-color: #111;
-  color: #0f0;
-  font-family: monospace;
-  font-size: 0.85rem;
-  padding: 1rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  border-left: 3px solid #0f0;
+    background-color: #111;
+    color: #0f0;
+    font-family: monospace;
+    font-size: 0.85rem;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-left: 3px solid #0f0;
+ }
+ .verify-banner {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+
+.codext-verification {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    color: #0f0;
+    opacity: 0.6;
+    letter-spacing: 1px;
 }
