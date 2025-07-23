@@ -1,23 +1,29 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    color: #00ff88;
-    font-family: 'Courier New', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  min-height: 100vh; /* instead of fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3rem; /* give breathing room */
+}
+
+
   
-  .message {
-    max-width: 700px;
-    line-height: 1.8;
-    font-size: 1.25rem;
-    padding: 0 1rem;
-    text-shadow: 0 0 4px #00ff88;
-  }
+
+.message {
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  padding: 2rem 1rem 1rem;
+  text-shadow: 0 0 4px #00ff88;
+}
+
   
   form {
     margin-top: 1rem;
@@ -70,11 +76,14 @@ body {
     word-wrap: break-word;
     border-left: 3px solid #0f0;
  }
- .verify-banner {
+.verify-banner {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: -1rem;
+    padding: 0 1rem;
+    max-width: 700px;
 }
+
 
 .codext-verification {
     font-family: 'Courier New', monospace;
