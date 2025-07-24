@@ -18,33 +18,17 @@
       <p class="caption">The fracture hums. The image blinks.</p>
     </div>
 
-    <div id="unlock">
-      <p class="prompt">What lies within the fracture?</p>
-      <input type="text" id="keyInput" placeholder="> awaiting input..." autocomplete="off" />
-      <button onclick="submitKey()">ENTER</button>
-      <p id="responseMessage"></p>
+    <div style="margin-top: 2rem;">
+      <p><em>The message has already been written. The fracture only echoes.</em></p>
+      <p><em>Recovered output. Format corrupted. Meaning intact.</em></p>
+
+      <pre style="font-family: monospace; font-size: 0.9rem; overflow-wrap: break-word; border: 1px solid #333; padding: 1rem; background: #111; color: #00ff88;">
+```_`__ ``_`___ ``__`_` `_____ ``_``__ ``_`__` ``__``` ``_`___ ```_`__ `_____ ``__``` ```_`_` ``_`__` ``__`__ ``__`_` ```__`` `_____ ````__` ``_```` ```_`_` `_____ ```_`__ ``_`___ ``__`_` `_____ ```__`` ```_`__ ``____` ```_`__ ``_`__` ``___`` `_____ ``_``__ ``_```` ```_``` ``__`_` ```__`_ ```__`` `_____ ```_`__ ``_`___ ``__`_` `_____ ```_`__ ```__`_ ```_`_` ```_`__ ``_`___ `_____ ``___`_ ``__`_` ``___`` ``_```` ``_``_` ``__`_` ```__`` `_____ ``___`` ``_``__ ``_```` ```__`` ``__`_` ```__`_ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____ `_____
+      </pre>
+
+      <p><em>It lives elsewhere. The fracture is not the message — it is the trace.</em></p>
+      <p><em>When the location is known, transmit through your existing comms channel.</em></p>
     </div>
-
-    <script>
-      async function submitKey() {
-        const key = document.getElementById("keyInput").value.trim();
-
-        const res = await fetch('/api/check-key', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ key })
-        });
-
-        const data = await res.json();
-        if (data.success) {
-          window.location.href = '/pulse-sequence/mire-fragment-3/';
-        } else {
-          document.getElementById("responseMessage").textContent = "Only noise.";
-        }
-      }
-    </script>
-
-    <p><em>The watchers wait. The answer is in the fracture, not around it.</em></p>
   </div>
 </body>
 </html>
